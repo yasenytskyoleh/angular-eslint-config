@@ -6,7 +6,7 @@
 `npm install prettier prettier-eslint eslint-config-prettier eslint-plugin-prettier --save-dev `
 
 ### Install additional plugins
-`npm i eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow eslint-plugin-unused-imports  —save-dev `
+`npm i eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow eslint-plugin-unused-imports eslint-plugin-import-newlines  —save-dev `
 
 ### ESLint configuration
 Filename: `.eslintrc.json`
