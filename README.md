@@ -167,14 +167,17 @@ Filename: `.eslintrc.json`
         "*.html"
       ],
       "extends": [
-        "plugin:@angular-eslint/template/recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:@angular-eslint/template/recommended"
       ],
       "rules": {
         "prettier/prettier": [
           "error",
           {
-            "parser": "angular"
+            "parser": "angular",
+            "bracketSameLine": true,
+            "bracketSpacing": false,
+            "htmlWhitespaceSensitivity": "strict"
           }
         ]
       }
@@ -197,24 +200,46 @@ e2e
 Filename: `.prettierrc`
 ```json
 {
-  "tabWidth": 2,
-  "useTabs": false,
+  "printWidth": 120,
   "singleQuote": true,
-  "semi": true,
-  "bracketSpacing": true,
-  "arrowParens": "avoid",
-  "trailingComma": "es5",
-  "bracketSameLine": true,
-  "printWidth": 80,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "bracketSameLine": false,
   "overrides": [
     {
       "files": "*.html",
       "options": {
-        "parser": "angular"
+        "parser": "angular",
+        "bracketSameLine": true,
+        "bracketSpacing": false,
+        "htmlWhitespaceSensitivity": "strict"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "parser": "scss",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "trailingComma": "none"
+      }
+    },
+    {
+      "files": "*.json",
+      "options": {
+        "parser": "json",
+        "trailingComma": "none"
       }
     }
   ]
 }
+
 
 ```
 
